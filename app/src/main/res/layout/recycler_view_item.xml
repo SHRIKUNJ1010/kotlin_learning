@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="dataModel"
+            type="com.example.learning_practice.recycler_view_activity_module.ItemsViewModel" />
+        <variable
+            name="clickListener"
+            type="com.example.learning_practice.recycler_view_activity_module.ItemsViewModelListener" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:onClick="@{() -> clickListener.onClick(dataModel)}"
+        app:cardBackgroundColor="#42f2f2"
+        app:cardElevation="6dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_id1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataModel.text}"
+                android:textSize="24sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/text_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataModel.text}"
+                android:textSize="24sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/text_id3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dataModel.text}"
+                android:textSize="24sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

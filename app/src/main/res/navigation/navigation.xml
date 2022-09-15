@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstTwoDice">
+
+    <fragment
+        android:id="@+id/firstTwoDice"
+        android:name="com.example.learning_practice.navigation_activity_module.fragments.FirstTwoDice"
+        android:label="fragment_first_two_dice"
+        tools:layout="@layout/fragment_first_two_dice" >
+        <action
+            android:id="@+id/action_firstTwoDice_to_secondTwoDice"
+            app:destination="@id/secondTwoDice" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondTwoDice"
+        android:name="com.example.learning_practice.navigation_activity_module.fragments.SecondTwoDice"
+        android:label="fragment_second_two_dice"
+        tools:layout="@layout/fragment_second_two_dice">
+        <action
+            android:id="@+id/action_secondTwoDice_to_thirdTwoDice"
+            app:destination="@id/thirdTwoDice" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdTwoDice"
+        android:name="com.example.learning_practice.navigation_activity_module.fragments.ThirdTwoDice"
+        android:label="fragment_third_two_dice"
+        tools:layout="@layout/fragment_third_two_dice" >
+    </fragment>
+</navigation>

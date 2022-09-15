@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".navigation_activity_module.fragments.SecondTwoDice"
+    >
+    <data>
+        <variable
+            name="diceData"
+            type="com.example.learning_practice.DiceData" />
+    </data>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/prev2"
+            android:layout_width ="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/previous"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <ImageButton
+                android:id="@+id/dice_image3"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dice_3" />
+            <ImageButton
+                android:id="@+id/dice_image4"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dice_4" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next2"
+            android:layout_width ="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/change2"
+        android:layout_width ="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/change"
+        />
+</FrameLayout>
+</layout>
